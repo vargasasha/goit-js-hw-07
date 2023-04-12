@@ -30,5 +30,15 @@ gallery.addEventListener("click", onClick);
 
 function onClick(event) {
     event.preventDefault();
-    console.log(event.target.dataset.source);
+
+    if (event.target.classList.value !== "gallery__image") {
+        return;
+    }
+
+    const { source } = event.target.dataset;
+
+    const instance = basicLightbox.create(`
+    <img src=${source} width="800" height="600">`);
+
+    instance.show();
 }
