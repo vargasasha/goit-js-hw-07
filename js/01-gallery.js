@@ -25,3 +25,10 @@ function createMarkup(array) {
 }
 
 gallery.insertAdjacentHTML("beforeend", createMarkup(galleryItems));
+
+gallery.addEventListener("click", onClick);
+
+function onClick(event) {
+    event.preventDefault();
+    console.log(event.target.dataset.source);
+}
