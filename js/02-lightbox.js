@@ -18,3 +18,10 @@ function createMarkup(array) {
 }
 
 gallery.insertAdjacentHTML("beforeend", createMarkup(galleryItems));
+
+var lightbox = new SimpleLightbox(".gallery a", {
+    /* options */
+    captionsData: "alt",
+    captionPosition: "bottom",
+    captionDelay: 250,
+});
